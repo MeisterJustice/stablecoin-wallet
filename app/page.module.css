@@ -152,6 +152,20 @@
   font-size: 14px;
 }
 
+/* Form */
+.form_title {
+  color: var(--black);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.form_wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {
@@ -232,6 +246,10 @@
 
   .transaction_amount {
     width: none;
+  }
+
+  .form_title {
+    font-size: 18px;
   }
 }
 
