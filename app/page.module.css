@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .section {
@@ -17,7 +17,30 @@
 .title_wrapper {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--light);
+}
+
+.balance_wrapper {
+  margin-top: 2.3rem;
+}
+
+.balance_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.balance {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 0.2rem;
 }
 
 /* Mobile */
@@ -33,6 +56,25 @@
     width: auto;
     padding: 1.5rem;
     border-radius: 1rem;
+  }
+
+  .stablecoin {
+    width: 35px;
+    height: 35px;
+  }
+
+  .title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--light);
+  }
+
+  .balance_title {
+    font-size: 12px;
+  }
+
+  .balance {
+    font-size: 40px;
   }
 }
 

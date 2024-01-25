@@ -2,7 +2,9 @@
 :root {
   --primary-color: #0e0b1f;
   --secondary-color: #1c1a41;
-  --accent-color: #e63946;
+  --accent-color: #05ebaa;
+  --accent-color-light: #69f1ca;
+  --light: #c4c7c3;
   --primary-text-color: #333333;
   --secondary-text-color: #4a5568;
   --tertiary-text-color: #718096;
