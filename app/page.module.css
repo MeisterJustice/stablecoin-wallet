@@ -1,10 +1,26 @@
 .main {
   height: 100vh;
   background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.section {
+  width: 40%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--primary-color);
 }
 
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+  }
 }
 
 /* Tablet and Smaller Desktop */
