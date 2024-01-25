@@ -43,6 +43,26 @@
   margin-top: 0.2rem;
 }
 
+/* TAB SECTION */
+.tab_section {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 0.5rem;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.tab_active {
+  background-color: var(--secondary-color-light);
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {
@@ -75,6 +95,16 @@
 
   .balance {
     font-size: 40px;
+  }
+
+  .tab_section {
+    gap: 0;
+    padding: 1rem 0;
+    justify-content: space-around;
+  }
+
+  .tab {
+    font-size: 14px;
   }
 }
 

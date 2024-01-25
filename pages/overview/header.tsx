@@ -1,11 +1,10 @@
-import classNames from "classnames";
 import Image from "next/image";
 
 import styles from "@/app/page.module.css";
 
 export default function Header() {
   return (
-    <section className={classNames(styles.section, styles.header_section)}>
+    <section className={styles.section}>
       <div className={styles.title_wrapper}>
         <Image
           src="/usdc.svg"
