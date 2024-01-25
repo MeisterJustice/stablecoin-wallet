@@ -1,4 +1,4 @@
-export interface Modal {
+export interface ModalProps {
   close?: () => void;
   children: React.ReactNode;
 }
