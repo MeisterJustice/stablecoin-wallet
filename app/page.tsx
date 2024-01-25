@@ -1,12 +1,5 @@
-import classNames from "classnames";
-import styles from "./page.module.css";
+import Overview from "@/pages/overview";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <section
-        className={classNames(styles.section, styles.header_section)}
-      ></section>
-    </main>
-  );
+  return <Overview />;
 }

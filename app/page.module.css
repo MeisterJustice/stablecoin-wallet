@@ -14,15 +14,32 @@
   background-color: var(--primary-color);
 }
 
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {
     height: auto;
     min-height: 100vh;
     display: block;
+    padding: 2rem 0.7rem;
+  }
+
+  .section {
+    width: auto;
+    padding: 1.5rem;
+    border-radius: 1rem;
   }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+  .section {
+    width: 65%;
+    padding: 2rem;
+  }
 }
