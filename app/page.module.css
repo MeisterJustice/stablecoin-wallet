@@ -84,6 +84,7 @@
   flex-direction: column;
   max-height: 62vh;
   overflow-y: auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .transaction_wrapper {
@@ -136,8 +137,11 @@
 }
 
 .transaction_amount_withdraw {
-  font-weight: 500;
   color: var(--danger);
+}
+
+.transaction_amount_swap {
+  color: var(--white);
 }
 
 .transaction_bsc_scan {
@@ -190,12 +194,12 @@
   }
 
   .stablecoin {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 
   .title {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--light);
   }
@@ -205,12 +209,12 @@
   }
 
   .balance {
-    font-size: 40px;
+    font-size: 33px;
   }
 
   .tab_section {
     gap: 0;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     justify-content: space-around;
   }
 

@@ -19,6 +19,7 @@ export default function TransactionItem({
   const { copied, copyToClipboard } = useCopy();
 
   const isDeposit = type === "deposit";
+  const isSwap = type === "swap";
   return (
     <div className={styles.transaction_wrapper}>
       <div className={styles.transaction_inner_wrapper}>
@@ -55,9 +56,10 @@ export default function TransactionItem({
       <p
         className={classNames(styles.transaction_amount, {
           [styles.transaction_amount_withdraw]: !isDeposit,
+          [styles.transaction_amount_swap]: isSwap,
         })}
       >
-        {isDeposit ? "+" : "-"}
+        {!isSwap && <span>{isDeposit ? "+" : "-"}</span>}
         {amount}
       </p>
 

@@ -30,6 +30,7 @@ export default function Form({ close }: { close: () => void }) {
       val = val.replace(/,/g, "");
       if (val.split(".").length > 2) return;
     }
+
     setForm({ ...form, [name]: val });
   };
 
@@ -42,6 +43,7 @@ export default function Form({ close }: { close: () => void }) {
 
     try {
       setLoading(true);
+      // simulate a delay
       await awaitFor(2500);
 
       const { amount, address } = form;

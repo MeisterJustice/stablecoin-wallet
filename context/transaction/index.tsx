@@ -45,13 +45,13 @@ export const TransactionContextProvider = ({ children }: ProviderProps) => {
       value={{
         transactions,
         filteredTransactions,
+        paginatedTransactions,
+        paginatedFilteredTransactions,
+        balance,
         handleFilteredTransactions,
         handleTransactions,
         handlePaginatedTransactions,
-        paginatedTransactions,
-        paginatedFilteredTransactions,
         handlePaginatedFilteredTransactions,
-        balance,
         handleBalance,
       }}
     >
