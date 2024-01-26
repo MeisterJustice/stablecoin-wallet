@@ -26,4 +26,5 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - `hooks` - Custom react hooks folder
 - `pages` - Page components
 - `public` - Public files
+- `public/db` - Mock JSON data files can be found here
 - `utils` - Exports utility functions used across components
