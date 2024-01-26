@@ -17,6 +17,8 @@ export const useTransaction = () => {
     const data = await response.json();
 
     context.handleTransactions(data);
+    const paginatedTransactions = data.slice(0, 10);
+    context.handlePaginatedTransactions(paginatedTransactions);
   };
 
   const fetchFilteredTransactions = async () => {
@@ -29,6 +31,8 @@ export const useTransaction = () => {
     );
 
     context.handleFilteredTransactions(filteredTransactions);
+    const paginatedFilteredTransactions = filteredTransactions.slice(0, 10);
+    context.handlePaginatedFilteredTransactions(paginatedFilteredTransactions);
   };
 
   useEffect(() => {

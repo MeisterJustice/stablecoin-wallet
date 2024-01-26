@@ -1,4 +1,4 @@
-const formatAmount = (amount: string) => {
+const formatAmount = (amount: string): string => {
   if (amount === "") return amount;
 
   const [integerPart, decimalPart] = amount.split(".");
@@ -16,7 +16,7 @@ const formatAmount = (amount: string) => {
   return value;
 };
 
-const formatAddress = (address: string) => {
+const formatAddress = (address: string): string => {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
 };
 
@@ -24,4 +24,8 @@ const awaitFor = (ms: number) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-export { formatAmount, formatAddress, awaitFor };
+const range = (start: number, end: number): number[] => {
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+};
+
+export { formatAmount, formatAddress, awaitFor, range };

@@ -1,8 +1,14 @@
 interface TransactionsContextProps {
   transactions: TransactionProps[];
+  paginatedTransactions: TransactionProps[];
   filteredTransactions: TransactionProps[];
+  paginatedFilteredTransactions: TransactionProps[];
   handleTransactions: (transactions: TransactionProps[]) => void;
   handleFilteredTransactions: (transactions: TransactionProps[]) => void;
+  handlePaginatedTransactions: (transactions: TransactionProps[]) => void;
+  handlePaginatedFilteredTransactions: (
+    transactions: TransactionProps[]
+  ) => void;
 }
 
 interface TransactionProps {

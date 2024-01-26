@@ -8,16 +8,31 @@ export const TransactionContext = createContext<
 
 export const TransactionContextProvider = ({ children }: ProviderProps) => {
   const [transactions, setTransactions] = useState<TransactionProps[]>([]);
+  const [paginatedTransactions, setPaginatedTransactions] = useState<
+    TransactionProps[]
+  >([]);
   const [filteredTransactions, setFilteredTransactions] = useState<
     TransactionProps[]
   >([]);
+  const [paginatedFilteredTransactions, setPaginatedFilteredTransactions] =
+    useState<TransactionProps[]>([]);
 
   const handleTransactions = (transactions: TransactionProps[]) => {
     setTransactions(transactions);
   };
 
+  const handlePaginatedTransactions = (transactions: TransactionProps[]) => {
+    setPaginatedTransactions(transactions);
+  };
+
   const handleFilteredTransactions = (transactions: TransactionProps[]) => {
     setFilteredTransactions(transactions);
+  };
+
+  const handlePaginatedFilteredTransactions = (
+    transactions: TransactionProps[]
+  ) => {
+    setPaginatedFilteredTransactions(transactions);
   };
 
   return (
@@ -27,6 +42,10 @@ export const TransactionContextProvider = ({ children }: ProviderProps) => {
         filteredTransactions,
         handleFilteredTransactions,
         handleTransactions,
+        handlePaginatedTransactions,
+        paginatedTransactions,
+        paginatedFilteredTransactions,
+        handlePaginatedFilteredTransactions,
       }}
     >
       {children}
