@@ -1,7 +1,270 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.section {
+  width: 40%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title_outter_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--light);
+}
+
+.send_money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance_wrapper {
+  margin-top: 2.3rem;
+}
+
+.balance_title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.balance {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 0.2rem;
+}
+
+/* TAB SECTION */
+.tab_section {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 2rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  box-shadow: none;
+}
+
+.tab {
+  padding: 0.5rem;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.tab_active {
+  background-color: var(--secondary-color-light);
+}
+
+/* TRANSACTION SECTION */
+.transaction_section {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  max-height: 62vh;
+  overflow-y: auto;
+}
+
+.transaction_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+  border-bottom: 0.7px solid var(--secondary-color-light);
+}
+
+.transaction_inner_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 32%;
+}
+
+.transaction_title {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.transaction_address_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transaction_address {
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.transaction_copy {
+  cursor: pointer;
+}
+
+.transaction_date {
+  color: var(--gray);
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.transaction_amount {
+  font-weight: 500;
+  color: var(--accent-color);
+  width: 30%;
+}
+
+.transaction_amount_withdraw {
+  font-weight: 500;
+  color: var(--danger);
+}
+
+.transaction_bsc_scan {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--secondary-color-light);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--light);
+  font-size: 14px;
+}
+
+/* Form */
+.form_title {
+  color: var(--black);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.form_wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form_btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+    padding: 2rem 0.7rem;
+  }
+
+  .section {
+    width: auto;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .stablecoin {
+    width: 35px;
+    height: 35px;
+  }
+
+  .title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--light);
+  }
+
+  .balance_title {
+    font-size: 12px;
+  }
+
+  .balance {
+    font-size: 40px;
+  }
+
+  .tab_section {
+    gap: 0;
+    padding: 1rem 0;
+    justify-content: space-around;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .transaction_section {
+    max-height: none;
+  }
+
+  .transaction_title {
+    font-size: 17px;
+  }
+
+  .transaction_address {
+    font-size: 11px;
+  }
+
+  .transaction_date {
+    font-size: 10px;
+  }
+
+  .transaction_copy {
+    width: 16px;
+    height: 16px;
+  }
+
+  .transaction_checkmark {
+    width: 19.3px;
+    height: 19.3px;
+  }
+
+  .transaction_amount {
+    font-size: 14px;
+  }
+
+  .transaction_bsc_scan {
+    display: none;
+  }
+
+  .transaction_amount {
+    width: none;
+  }
+
+  .form_title {
+    font-size: 18px;
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+  .section {
+    width: 65%;
+    padding: 2rem;
+  }
 }
