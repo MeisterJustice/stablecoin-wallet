@@ -1,11 +1,9 @@
-"use client";
-import { TabContextProvider } from "@/context/tab";
-import Overview from "@/pages/overview";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <TabContextProvider>
-      <Overview />
-    </TabContextProvider>
+    <main className={styles.main}>
+      <p>Hello World</p>
+    </main>
   );
 }
