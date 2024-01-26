@@ -1,13 +1,10 @@
-import styles from "@/app/page.module.css";
-import Image from "next/image";
-import { M2ClickAnimation } from "@/components";
-import { TransactionProps } from "./types";
-import useCopy from "@/hooks/useCopy";
 import classNames from "classnames";
-
-const formatAddress = (address: string) => {
-  return `${address.slice(0, 6)}...${address.slice(-4)}`;
-};
+import Image from "next/image";
+import styles from "@/app/page.module.css";
+import { M2ClickAnimation } from "@/components";
+import useCopy from "@/hooks/useCopy";
+import { formatAddress } from "@/utils";
+import { TransactionProps } from "./types";
 
 export default function TransactionItem({
   address,

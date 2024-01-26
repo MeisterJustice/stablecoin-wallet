@@ -166,6 +166,14 @@
   gap: 1.5rem;
 }
 
+.form_btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {

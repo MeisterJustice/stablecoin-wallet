@@ -41,6 +41,7 @@ const M2Button = ({
       transition={{ ease: "backOut" }}
       className={classNames(styles.btn, {
         [styles.secondary_btn]: variant === "secondary",
+        [styles.tertiary_btn]: variant === "tertiary",
 
         [styles.disabled]: disabled,
       })}
@@ -48,7 +49,9 @@ const M2Button = ({
       type={type}
     >
       {icon && icon}
-      <p>{text}</p>
+
+      {loading && <div className={styles.spinner} />}
+      {!loading && <p>{text}</p>}
     </motion.button>
   );
 };

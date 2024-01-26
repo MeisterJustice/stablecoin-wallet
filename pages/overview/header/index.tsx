@@ -40,7 +40,7 @@ export default function Header() {
 
       {openModal && (
         <M2Modal close={handleModal}>
-          <Form />
+          <Form close={handleModal} />
         </M2Modal>
       )}
     </>

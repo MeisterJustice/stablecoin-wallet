@@ -6,4 +6,5 @@ export default interface InputProps {
   variant?: "primary" | "secondary";
   placeholder: string;
   name: string;
+  required?: boolean;
 }

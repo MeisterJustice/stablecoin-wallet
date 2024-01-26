@@ -32,14 +32,48 @@
   justify-content: center;
   align-items: center;
   gap: 0.3rem;
+  cursor: pointer;
+  min-width: 90px;
 }
 
 .secondary_btn {
   color: var(--white);
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   border: none;
+  height: 40px;
+  font-weight: 700;
+}
+
+.tertiary_btn {
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: none;
+  height: 40px;
+  font-weight: 700;
+  border: 1px solid var(--primary-color);
 }
 
 .disabled {
   opacity: 0.5;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  border-top: 2px solid var(--white);
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }

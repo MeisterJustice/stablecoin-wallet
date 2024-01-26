@@ -16,4 +16,12 @@ const formatAmount = (amount: string) => {
   return value;
 };
 
-export { formatAmount };
+const formatAddress = (address: string) => {
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
+};
+
+const awaitFor = (ms: number) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+export { formatAmount, formatAddress, awaitFor };
