@@ -1,10 +1,12 @@
 import classNames from "classnames";
 import Image from "next/image";
+import moment from "moment";
+
 import styles from "@/app/page.module.css";
 import { M2ClickAnimation } from "@/components";
 import useCopy from "@/hooks/useCopy";
 import { formatAddress } from "@/utils";
-import { TransactionProps } from "./types";
+import { TransactionProps } from "@/context/transaction/types";
 
 export default function TransactionItem({
   address,
@@ -12,10 +14,11 @@ export default function TransactionItem({
   date,
   hash,
   title,
+  type,
 }: TransactionProps) {
   const { copied, copyToClipboard } = useCopy();
 
-  const isDeposit = title === "Received";
+  const isDeposit = type === "deposit";
   return (
     <div className={styles.transaction_wrapper}>
       <div className={styles.transaction_inner_wrapper}>
@@ -44,7 +47,9 @@ export default function TransactionItem({
           )}
         </div>
 
-        <p className={styles.transaction_date}>{date}</p>
+        <p className={styles.transaction_date}>
+          {moment(date).format("DD/MM/YYYY HH:mm A")}
+        </p>
       </div>
 
       <p
