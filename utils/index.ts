@@ -28,4 +28,9 @@ const range = (start: number, end: number): number[] => {
   return Array.from({ length: end - start + 1 }, (_, i) => start + i);
 };
 
-export { formatAmount, formatAddress, awaitFor, range };
+const isValidAddress = (address: string): boolean => {
+  // basic implementation
+  return address.length > 10;
+};
+
+export { formatAmount, formatAddress, awaitFor, range, isValidAddress };

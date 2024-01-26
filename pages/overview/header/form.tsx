@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "@/app/page.module.css";
 import { M2Button, M2Input } from "@/components";
-import { awaitFor, formatAmount } from "@/utils";
+import { awaitFor, formatAmount, isValidAddress } from "@/utils";
 import { useTransaction } from "@/hooks/useTransaction";
 import { useTab } from "@/hooks/useTab";
 
@@ -21,7 +21,11 @@ export default function Form({ close }: { close: () => void }) {
   });
   const [loading, setLoading] = useState(false);
 
-  const disable = Number(form.amount) > balance || balance === 0;
+  const { address, amount } = form;
+
+  const disable = Number(amount) > balance || balance === 0;
+  const addressError =
+    address && !isValidAddress(address) ? "Invalid address" : "";
 
   const handleChange = (name: string, value: string) => {
     let val = value;
@@ -84,15 +88,16 @@ export default function Form({ close }: { close: () => void }) {
       <form onSubmit={handleSubmit} className={styles.form_wrapper}>
         <M2Input
           onChange={(val) => handleChange("address", val)}
-          value={form.address}
+          value={address}
           placeholder="Address"
           name="address"
           required
+          error={addressError}
         />
 
         <M2Input
           onChange={(val) => handleChange("amount", val)}
-          value={formatAmount(form.amount)}
+          value={formatAmount(amount)}
           placeholder="0.00"
           label="USDC"
           max={handleMax}
