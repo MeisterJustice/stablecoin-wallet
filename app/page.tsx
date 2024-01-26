@@ -1,11 +1,11 @@
 "use client";
-import { TabContextProvider } from "@/context/tab";
+import { ContextProvider } from "@/context";
 import Overview from "@/pages/overview";
 
 export default function Home() {
   return (
-    <TabContextProvider>
+    <ContextProvider>
       <Overview />
-    </TabContextProvider>
+    </ContextProvider>
   );
 }

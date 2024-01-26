@@ -7,4 +7,5 @@ export default interface InputProps {
   placeholder: string;
   name: string;
   required?: boolean;
+  error?: string;
 }

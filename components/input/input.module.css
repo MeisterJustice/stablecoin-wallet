@@ -54,3 +54,20 @@
   font-size: 12px;
   font-weight: 500;
 }
+
+.error_wrapper {
+  margin-top: -12px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: var(--danger-light);
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .input_wrapper {
+    height: 48px;
+  }
+}
