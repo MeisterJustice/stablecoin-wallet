@@ -54,3 +54,10 @@
   font-size: 12px;
   font-weight: 500;
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .input_wrapper {
+    height: 48px;
+  }
+}

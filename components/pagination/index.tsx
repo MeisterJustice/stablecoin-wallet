@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
+import classNames from "classnames";
 import { useTransaction } from "@/hooks/useTransaction";
 import { useTab } from "@/hooks/useTab";
+
 import styles from "./pagination.module.css";
-import classNames from "classnames";
 import { M2ClickAnimation } from "..";
 
 export default function M2Pagination() {
   const {
-    handleTransactions,
     transactions,
     filteredTransactions,
-    handleFilteredTransactions,
     handlePaginatedFilteredTransactions,
     handlePaginatedTransactions,
   } = useTransaction();
@@ -65,7 +64,7 @@ export default function M2Pagination() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [currentTab]);
+  }, [currentTab, transactions]);
   return (
     <div className={styles.pagination}>
       <M2ClickAnimation onClick={prevPage}>

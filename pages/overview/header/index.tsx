@@ -3,11 +3,13 @@ import Image from "next/image";
 
 import styles from "@/app/page.module.css";
 import { M2Button, M2Modal } from "@/components";
+import { useTransaction } from "@/hooks/useTransaction";
 import Form from "./form";
 
 const Icon = <Image src="/send.svg" alt="send icon" width={20} height={20} />;
 
 export default function Header() {
+  const { balance } = useTransaction();
   const [openModal, setOpenModal] = useState(false);
 
   const handleModal = () => {
@@ -34,7 +36,7 @@ export default function Header() {
         <div className={styles.balance_wrapper}>
           <h5 className={styles.balance_title}>Available Balance</h5>
 
-          <h3 className={styles.balance}>23,890.62</h3>
+          <h3 className={styles.balance}>{balance.toLocaleString()}</h3>
         </div>
       </section>
 

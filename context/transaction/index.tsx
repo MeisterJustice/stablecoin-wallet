@@ -16,6 +16,7 @@ export const TransactionContextProvider = ({ children }: ProviderProps) => {
   >([]);
   const [paginatedFilteredTransactions, setPaginatedFilteredTransactions] =
     useState<TransactionProps[]>([]);
+  const [balance, setBalance] = useState(13550.52);
 
   const handleTransactions = (transactions: TransactionProps[]) => {
     setTransactions(transactions);
@@ -35,6 +36,10 @@ export const TransactionContextProvider = ({ children }: ProviderProps) => {
     setPaginatedFilteredTransactions(transactions);
   };
 
+  const handleBalance = (amount: number) => {
+    setBalance((prevBalance) => prevBalance - amount);
+  };
+
   return (
     <TransactionContext.Provider
       value={{
@@ -46,6 +51,8 @@ export const TransactionContextProvider = ({ children }: ProviderProps) => {
         paginatedTransactions,
         paginatedFilteredTransactions,
         handlePaginatedFilteredTransactions,
+        balance,
+        handleBalance,
       }}
     >
       {children}

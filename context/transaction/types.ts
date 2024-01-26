@@ -9,6 +9,8 @@ interface TransactionsContextProps {
   handlePaginatedFilteredTransactions: (
     transactions: TransactionProps[]
   ) => void;
+  balance: number;
+  handleBalance: (balance: number) => void;
 }
 
 interface TransactionProps {
